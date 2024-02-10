@@ -45,12 +45,16 @@ class OtlpGrpcServer:
         server.add_insecure_port("0.0.0.0:4317")
         self.server = server
 
-    def run(self):
+    def start(self):
+        """Starts the server. Does not block."""
         self.server.start()
-        try:
-            self.server.wait_for_termination()
-        except KeyboardInterrupt:
-            self.server.stop(0)
+
+    def wait_for_termination(self):
+        """Blocks until the server stops"""
+        self.server.wait_for_termination()
+
+    def stop(self):
+        self.server.stop(grace=None)
 
 
 class LogsServiceServicer(logs_service_pb2_grpc.LogsServiceServicer):
