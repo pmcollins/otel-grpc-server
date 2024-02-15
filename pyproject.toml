@@ -30,9 +30,9 @@ dependencies = [
 ]
 
 [project.urls]
-Documentation = "https://github.com/unknown/otel-grpc-server#readme"
-Issues = "https://github.com/unknown/otel-grpc-server/issues"
-Source = "https://github.com/unknown/otel-grpc-server"
+Documentation = "https://github.com/pmcollins/otel-grpc-server#readme"
+Issues = "https://github.com/pmcollins/otel-grpc-server/issues"
+Source = "https://github.com/pmcollins/otel-grpc-server"
 
 [tool.hatch.version]
 path = "src/otelserver/__about__.py"
